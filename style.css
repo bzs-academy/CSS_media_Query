@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Helvetica;
+}
+
+.navbar {
+    overflow: hidden;
+    background: #333;
+    margin-top: 50px;
+    position: sticky;
+    top: 0;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+/* .text {
+    width: 300px;
+    height: 1200px;
+    display: block;
+    background: lightblue;
+    margin-bottom: 300px;
+} */
+
+.row {
+    width: 100%;
+}
+.outer-box {
+    width: 25%;
+    float: left;
+}
+.column {
+    padding: 20px;
+    margin: 20px;
+    height: 300px;
+}
+
+.row:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+div + p {
+    border: 1px solid red;
+    font-size: 25px;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;;
+}
+
+.example {
+    background: yellow;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    display: none;
+}
+
+.image {
+    width: 100%;
+}
+.image-box {
+    margin: 20px;
+}
+.image .image-box img {
+    width: 100%;
+}
+@media screen and (min-width: 601px) and (max-width: 992px) {
+    .outer-box {
+        width: 50%;
+    }
+    .example {
+        display: block;
+    }
+    .image {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar a {
+        width: 100%;
+        float: none;
+    }
+    .outer-box {
+        width: 100%;
+    }
+    .column {
+        height: 100px;
+    }
+    .example {
+        display: none;
+    }
+    div + p {
+        font-size: 15px;
+    }
+}
